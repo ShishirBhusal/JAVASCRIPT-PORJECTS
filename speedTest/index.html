@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypingTest.com</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <link href='https://fonts.googleapis.com/css?family=Cutive+Mono|Roboto:400,900,700' rel='stylesheet'
+        type='text/css' />
+    <div class="typehere">
+        <h1 id="output"></h1>
+
+        <div class="target mono" id="target"></div>
+        <div id="your-attempt" class="mono your-attempt" placeholder="Your text will appear here"></div>
+
+        <div class="settings">
+            <a href="#" id="reset">Reset</a> | <a href="#" id="change">Change text</a> | <a href="#" id="pause">Pause
+                II</a>
+        </div>
+
+    </div>
+
+    <div class="results">
+        <ul class="stats">
+            <li>Words per minute <span id="wpm">0</span></li>
+            <li>Wordcount <span id="wordcount">0</span></li>
+            <li>Timer <span id="timer">0</span></li>
+            <li>Errors <span id="errors">0</span></li>
+        </ul>
+    </div>
+
+    <hr style="clear:both;" />
+
+    <div>
+        <textarea name="" id="input_text" cols="30"
+            rows="10">Learn as if you will live forever, live like you will die tomorrow : Mahatma Ghandhi</textarea>
+    </div>
+
+</body>
+<script src="script.js"></script>
+
+</html>
