@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task To Do</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="taskPalet">
+        <div class="head">
+            <h1>Save Your Task and set reminder</h1>
+            <div class="inPanel">
+                <button id="addBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path
+                            d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
+                    </svg>
+                </button>
+                <input type="text" id="taskTitle" placeholder="Title of Your Task">
+
+                <div class="detailPart">
+
+                    <textarea class="textarea" type="" placeholder="Description"></textarea>
+
+                    <div class="taskTime">
+                        <input type="checkbox" name="time" id="timeSwitch">
+                        <label for="timeSwitch">
+                            <p>Setup reminder</p>
+                            <div class="switch" onclick="fnTiming()"></div>
+                        </label>
+
+                        <div class="others">
+                            <p>After how many second you want to be reminded </p>
+                            <input type="number" step="1" id="inTime" value="60" min="1" max="3600">
+                        </div>
+
+                    </div>
+                </div>
+            
+            </div>
+           </div>
+           
+        <div class="taskList">
+            <h1 style="margin-top: 35px;">Your tasks shows here</h1>
+            <div class="taskBar">
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+</html>
