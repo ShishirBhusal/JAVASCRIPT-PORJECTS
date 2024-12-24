@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+.container{
+    height: 72vh;
+    width: 43%;
+    margin-top: 88px;
+    border: solid;
+    text-align: center;
+    position: absolute;
+    border-radius: 21px;
+    border: 1px solid white;
+    box-shadow: rgb(0 0 0 / 7%) 0px 1px 2px, rgb(0 0 0 / 7%) 0px 2px 4px, rgb(0 0 0 / 7%) 0px 4px 8px, rgb(0 0 0 / 7%) 0px 8px 16px, rgb(0 0 0 / 7%) 0px 16px 32px, rgb(0 0 0 / 7%) 0px 32px 64px;
+}
+.wrapper{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.wrapper p{
+    position: relative;
+    /* padding: 9px; */
+    display: inline-block;
+    color: red;
+    z-index: 9999;
+    font-size: 48px;
+    margin-bottom: 120px;
+}
+.wrapper p::before{
+    content: '';
+    position: absolute;
+    width: 214px;
+    height: 213px;
+    background-color: white;
+    border: #00000033 3px solid;
+    z-index: -1;
+    border-radius: 50%;
+    left: -17%;
+    top: -130%;
+    animation-name: shine;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    transform: rotate3d(1, 1, 0, 25deg);
+    box-shadow: rgb(17 12 46 / 15%) 0px 48px 100px 0px;
+}
+@keyframes shine{
+    0%,100%{
+        box-shadow: 0px 0px 32px -12px rgba(246, 180, 0, .5);
+    }
+    50%{
+        box-shadow: 0px 0px 32px 3px rgba(246, 180, 0, .5);
+    }
+}
+button{
+    
+    background-color: #fff;
+    padding: 12px 26px;
+    transform: rotate3d(-6, 0, 1, 14deg);
+    border: 1px solid #a9a9a91c;
+    border-radius: 9px;
+    font-size: 20px;
+    transition: all .2s ease;
+    outline: 0;
+    font-family: cursive;
+    letter-spacing: 2px;
+    box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px, rgb(10 37 64 / 35%) 0px -2px 6px 0px inset;
+}
+button:not(:last-child){
+    margin-right: 20px;
+}
+button:hover,
+button:focus
+{
+    border-color: #F6B400;
+    color: #F6B400;
+    box-shadow: 0px 4px 27px -12px #F6B400;
+}
