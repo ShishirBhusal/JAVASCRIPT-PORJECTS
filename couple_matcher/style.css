@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('img/bg.jpg');
+}
+
+.nav-item {
+    font-size: 24px;
+    margin-left: 22px;
+    font-family: cursive;
+    /* font-style: italic; */
+    /* text-decoration: underline; */
+}
+
+.navbar-nav {
+    margin-right: -81px;
+    margin-top: 35px;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --blue: #0071FF;
+    --light-blue: #B6DBF6;
+    --dark-blue: #005DD1;
+    --grey: #f2f2f2;
+}
+
+
+#withpreferredname {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.container_img {
+    max-width: 350px;
+    width: 100%;
+    background: #fff;
+    padding: 40px;
+    border-radius: 25px;
+    margin-top: 285px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+#withpreferredname h1,
+.toabsolute {
+    position: absolute;
+    color: #dc3545;
+    top: 39%;
+    font-size: 42px;
+    font-family: cursive;
+    text-align: center;
+}
+
+.heart {
+    width: 99px;
+    height: 96px;
+    margin-top: 262px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.matchbtnforPreferred {
+    width: 214px;
+    height: 58px;
+    display: block;
+    margin: 50px auto 30px;
+    font-size: 24px;
+    padding: 0px;
+}
+
+
+.showpercentage {
+    text-align: center;
+    margin-top: 47px;
+    font-size: 51px;
+    font-family: cursive;
+    font-weight: lighter;
+    color: coral;
+}
+
+
+.toabsolute {
+    margin-top: -130px;
+}
+
+.img-area {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    background: var(--grey);
+    margin-bottom: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img-area .icon {
+    font-size: 100px;
+}
+
+.img-area h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.img-area p {
+    color: #999;
+}
+
+.img-area p span {
+    font-weight: 600;
+}
+
+.img-area img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 100;
+}
+
+.img-area::before {
+    content: attr(data-img);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: all .3s ease;
+    z-index: 200;
+}
+
+.img-area.active:hover::before {
+    opacity: 1;
+}
+
+.select-image {
+    display: block;
+    width: 100%;
+    padding: 16px 0;
+    border-radius: 15px;
+    background: var(--blue);
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.select-image:hover {
+    background: var(--dark-blue);
+}
+
+
+
+#fromlist {
+    background: rgb(195, 115, 128);
+    margin-top: 50px;
+    width: 100vw;
+    height: 100vh;
+}
+
+#fromlist h1 {
+    margin-top: 60px;
+    text-align: center;
+    color: hsl(354deg 71% 35%);
+    font-size: 42px;
+    font-family: cursive;
+    position: absolute;
+    left: 17%;
+}
+
+form {
+    justify-content: center;
+    position: relative;
+    top: 25%;
+}
+
+#fromlist .btn {
+    width: 214px;
+    height: 58px;
+    display: block;
+    margin: 220px auto 30px;
+    font-size: 24px;
+    padding: 0px;
+}
+
+#fromlist .showafterclick {
+    width: 61%;
+    height: 80%;
+    background-color: white;
+    border-radius: 31px;
+    margin-top: 250px;
+}
+
+.imagepart {
+    width: 50%;
+    border-right: solid #ddd7d7;
+}
+.contentpart{
+    width: 50%;
+    display: flex;
+    padding: 64px 6px 6px;
+    
+}
+
+#fromlist .showpercentage{
+    margin-top: 47px;
+    font-size: 38px;
+    color: #41464b;
+    font-weight: lighter;
+    font-family: 'Poppins' ,sans-serif;
+}
+#fromlist .showpercentage span{
+    font-size: 45px;
+    font-family: cursive;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+#fromlist .imagepart img{
+    height: 100%;
+    width: 103%;
+    margin-left: -12px;
+    border-top-left-radius: 31px;
+    border-bottom-left-radius: 31px;
+}
