@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Ubuntu:wght@300&display=swap');
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: url(https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000);
+    background-size: cover;
+}
+
+
+.button{
+    width: 57px;
+    padding: 17px;
+    font-size: 20px;
+    margin: 1px 3px;
+    border: 0px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+}
+
+button:active{
+    background-color: #e0d5d5;
+}
+
+.container{
+    background-color: white;
+    border-radius: 25px;
+    padding: 44px 12px 12px;
+    box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px, rgb(10 37 64 / 35%) 0px -2px 6px 0px inset;
+
+}
+
+.row{
+  margin: 8px 0;
+}
+.row input{
+    width: 245px;
+    height: 53px;
+    font-size: 43px;
+    font-family: 'Roboto';
+    margin: 0;
+    padding-left: -1px;
+    padding: 10px 0px;
+    border: 2px solid transparent;
+    text-align: right;
+    background: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.text-center{
+    margin-top: 55px;
+    text-align: center;
+    color: #00000094;
+    font-family: system-ui;
+    font-size: 35px;
+    letter-spacing: 2px;
+  }
+  
+  .bg-red{
+    background: red;
+  }
+  
+  .mx-auto{
+    margin: auto;
+  }
+  
+  .flex{
+    display:flex;
+  } 
+  .flex-col{
+    flex-direction: column;
+  }
+  
+  .items-center{
+    align-items: center;
+  }
