@@ -1,0 +1,114 @@
+ *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+body {
+    background-color: #fff;
+  }
+  
+.all{
+    /* position: absolute;
+    width: 80vw;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    height: 409px;
+    background: white;
+    box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px, rgb(10 37 64 / 35%) 0px -2px 6px 0px inset;
+    border-radius: 22px; */
+
+    background: #f7f7f7;
+    padding: 10px 219px 70px;
+  }
+
+  .all h1{
+    text-align: center;
+    margin-top: 64px;
+    font-size: 50px;
+    font-weight: bolder;
+    font-family: monospace;
+  }
+
+  .all .wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 39px;
+  }
+  
+  .all .container {
+    width: 29vmin;
+    height: 35vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1em 0;
+    position: relative;
+    font-size: 18px;
+    border-radius: 0.5em;
+    border-bottom: 10px solid #188cf9;
+    margin-left: 33px;
+    box-shadow: rgb(9 30 66 / 22%) 0px 4px 8px -2px, rgb(9 30 66 / 12%) 0px 0px 0px 1px;
+  }
+.all   
+  i{
+    color: #188cf9;
+    font-size: 2.5em;
+    text-align: center;
+  
+  }
+  
+  .all span.num {
+    color: #000;
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+    font-size: 3em;
+  }
+  
+  .all span.text {
+    color: #a5a5a5;
+    font-size: 1.1em;
+    text-align: center;
+    pad: 0.7em 0;
+    font-weight: 400;
+    /* line-height: 0; */
+  }
+  
+  @media screen and (max-width:1024px) {
+    .all .wrapper {
+      width: 85vw;
+    }
+    .all .container {
+      height: 26vmin;
+      width: 26vmin;
+      font-size: 12px;
+    }
+  }
+  
+   @media screen and (max-width: 768px) {
+    .all .wrapper{
+      width: 90vw;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+  
+    .all .container {
+      width: calc(50% -40px);
+      height: 30vmin;
+      font-size: 13px;
+    }
+  }
+   @media screen and (max-width: 480px) {
+    .all .wrapper{
+      gap: 15px;
+    }
+  
+    .all .container {
+      width: 100%;
+      height: 25vmin;
+      font-size: 8px;
+    }
+  }
