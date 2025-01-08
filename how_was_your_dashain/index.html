@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How was your Dashain??</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header>How was your dashain? <br></header>
+    <div class="poll-area">
+
+      <input type="checkbox" name="poll" id="opt-1">
+      <input type="checkbox" name="poll" id="opt-2">
+      <input type="checkbox" name="poll" id="opt-3">
+      <input type="checkbox" name="poll" id="opt-4">
+
+      <!-- For percentage Bar and Texts -->
+      <label for="opt-1" class="opt-1">
+        <div class="row">
+          <div class="column">
+            <span class="circle"></span>
+            <span class="text">Great 😍</span>
+          </div>
+          <span class="percent">60%</span>
+        </div>
+        <div class="progress 55" id="pstyle1" style='--w:60;'></div>
+      </label>
+      <label for="opt-2" class="opt-2">
+        <div class="row">
+          <div class="column">
+            <span class="circle"></span>
+            <span class="text">Exiting 🤪</span>
+          </div>
+          <span class="percent">10%</span>
+        </div>
+        <div class="progress 80" id="pstyle2" style='--w:10;'></div>
+      </label>
+      <label for="opt-3" class="opt-3">
+        <div class="row">
+          <div class="column">
+            <span class="circle"></span>
+            <span class="text">Not that much good 😶</span>
+          </div>
+          <span class="percent">23%</span>
+        </div>
+        <div class="progress 20" id="pstyle3" style='--w:23;'></div>
+      </label>
+      <label for="opt-4" class="opt-4">
+        <div class="row">
+          <div class="column">
+            <span class="circle"></span>
+            <span class="text">Bad 😢</span>
+          </div>
+          <span class="percent">7%</span>
+        </div>
+        <div class="progress 96" id="pstyle4" style='--w:7;'></div>
+      </label>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
