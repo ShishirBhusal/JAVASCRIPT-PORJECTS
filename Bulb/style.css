@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: yellow;
+}
+.wrapper{
+  width: 80%;
+    height: 604px;
+    position: relative;
+    border: solid 8px black;
+    /* border-radius: 25px; */
+    /* background: #b7b7b7bf; */
+}
+.content{
+  text-align: center;
+  position: absolute;
+  left: 55%;
+  top: 17%;
+  font-size: 30px;
+}
+img{
+  margin-top: 92px;
+  height: 244px;
+  width: 21%;
+  position: absolute;
+  left: 12%;
+}
+img#bulb-on{
+  opacity: 0;
+  animation: glow 3s linear infinite;
+}
+@keyframes glow {
+  0%{
+    opacity: 1;
+  }
+  5%{
+    opacity: 1;
+  }
+  70%{
+    opacity: 1;
+  }
+  74%{
+    opacity: 0;
+  }
+  80%{
+    opacity: 1;
+  }
+  84%{
+    opacity: 0;
+  }
+  90%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.btn{
+  position: absolute;
+  bottom: 186px;
+  left: 22%;
+  transform: translateX(-50%);
+}
+.btn span{
+  height: 50px;
+  width: 180px;
+  display: block;
+  text-align: center;
+  line-height: 48px;
+  background: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  cursor: pointer;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+.btn span:hover{
+  background: #fff;
+  color: #111;
+}
+#btn:checked ~ .btn span{
+  background: powderblue;
+  width: 136px;
+  color: #111;
+  border: solid 2px whitesmoke;
+  border-radius: 14px;
+  text-transform: capitalize;
+}
+.btn span:before{
+  content: "Turn Off";
+}
+#btn:checked ~ img#bulb-on{
+  animation: none;
+}
+#btn:checked ~ .btn span:before{
+  content: "Turn on";
+}
+.wrapper input{
+  display: none;
+}
