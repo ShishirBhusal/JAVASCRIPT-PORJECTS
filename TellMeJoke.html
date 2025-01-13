@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tell me joke...</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Palanquin+Dark&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .backgroundimage {
+            background-image: url(https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);
+            height: 100vh;
+            width: 100vw;
+            filter: blur(10px);
+        }
+
+        body {
+            font-family: system-ui;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            position: absolute;
+            min-height: 286px;
+            height: fit-content;
+            vertical-align: center;
+            padding: auto;
+            width: 495px;
+            padding-bottom: 32px;
+        }
+
+        .double_quote {
+            font-size: 57px;
+            margin-left: 16px;
+            margin-top: -43px;
+            color: gray;
+            font-family: 'Palanquin Dark', sans-serif;
+        }
+
+        .title {
+            font-size: 30px;
+            text-align: center;
+            margin-top: 18px;
+            text-decoration: underline;
+        }
+
+        .container button {
+            background-color: #48abe0;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 15px;
+            height: fit-content;
+            width: fit-content;
+            box-shadow: 0 2px 4px darkslategrey;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border-radius: 25px;
+            margin-top: 20px;
+            margin-left: 170px;
+            margin-top: 26px;
+        }
+
+        .container button:active {
+            background-color: #48abe0;
+            box-shadow: 0 0 2px darkslategray;
+            transform: translateY(2px);
+        }
+
+        .background {
+            background: gainsboro;
+            margin-top: -53px;
+            text-align: center;
+            height: fit-content;
+            padding: 34px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="backgroundimage">
+    </div>
+
+    <div class="container">
+        <h3 class="title">Tell me a joke</h3><br><br>
+        <h1 class="double_quote">"</h1>
+        <br>
+        <div class="background">
+            <h4 class="joke"> Why do Java programmers have to wear glasses? Because they don’t C#.</h4>
+        </div>
+        <button onclick="generateJoke()">Generate Another Joke</button>
+    </div>
+
+</body>
+
+    <script>
+        const jokes = [
+              "What do you call a sleeping bull? : <br> <i> A bulldozer.</i>"
+            , "Why do melons have weddings? : <br> <i> They cantaloupe.</i>"
+            , "How do you make a tissue dance? : <br> <i> You put a little boogie in it.</i>"
+            , "Why did the photo go to jail? : <br> <i> It was framed.</i>"
+            , "Why did the golfer bring an extra pair of pants? : <br> <i> In case he got a hole in one.</i>"
+            , "Why did the baby strawberry cry? : <br> <i> His parents were in a jam.</i>"
+            , "Why did the scarecrow win an award? : <br> <i> He was outstanding in his field.</i>"
+            , "What kind of jewelry do rabbits wear? : <br> <i> 14 carrot gold.</i>"
+            , "Where do polar bears keep their money? : <br> <i> In a snowbank.</i>"
+            , "What do you call a factory that makes okay products? : <br> <i> A satis-factory.</i>"
+            , "What did the ocean say to the sand? : <br> <i> Nothing — it just waved.</i>"
+            , "Why couldn’t the sailor learn his alphabet? : <br> <i> He kept getting lost at C.</i>"
+            , "What do lawyers wear to court? : <br> <i> Lawsuits.</i>"
+            , "What do cows most like to read? : <br> <i> Cattle-logs.</i>"
+            , "What do you call an unpredictable camera? : <br> <i> A loose Canon.</i>"
+            , "Why did the invisible man turn down the job offer? : <br> <i> He couldn’t see himself doing it.</i>"
+            , "Why can’t a nose be 12 inches long? : <br> <i> Then it’d be a foot.</i>"
+            , "Why is the grass so dangerous? : <br> <i> It’s full of blades.</i>"
+            , "How do you fix a cracked pumpkin? : <br> <i> With a pumpkin patch.</i>"
+            , "What does the dentist of the year get? : <br> <i> A little plaque.</i>"
+            , "What do you call an angry carrot? : <br> <i> A steamed veggie.</i>"
+            , "Why do ghosts like to ride in elevators? : <br> <i> It lifts their spirits.</i>"
+            , "How do you make an octopus laugh? : <br> <i> With ten-tickles.</i>"
+            , "How can you tell it’s a dogwood tree? : <br> <i> By the bark.</i>"
+            , "When is a door not a door? : <br> <i> When it’s ajar.</i>"
+            , "How do snails fight? : <br> <i> They slug it out.</i>"
+
+            , "How do you get a country girl’s attention? : <br> <i> A tractor.</i>"
+            , "Why do bees have sticky hair? : <br> <i> They use a honeycomb.</i>"
+            , "Why can’t you trust duck doctors? : <br> <i> They’re all quacks.</i>"
+            , "Why is Peter Pan always flying? : <br> <i> He Neverlands.</i>"
+            , "What do you call a toothless bear? : <br> <i> A gummy bear.</i>"
+            , "Why are spiders so smart? : <br> <i> They can find everything on the web.</i>"
+            , "Why was the ghost so tired? : <br> <i> He worked the graveyard shift.</i>"
+            , "How does a duck buy lipstick? : <br> <i> She just puts it on her bill.</i>"
+            , "Which school subject was the witch’s favorite? : <br> <i> Spelling.</i>"
+            , "What do you call someone with no body and no nose? : <br> <i> Nobody Knows.</i>"
+            , "What do you call a blind dinosaur? : <br> <i> A do-you-think-he-saw-us.</i>"
+            , "What do you call a priest who becomes a lawyer? : <br> <i> A father-in-law.</i>"
+            , "Why do cows have hooves and not feet? : <br> <i> They lactose.</i>"
+            , "What do you get when you cross a snowman and a vampire? : <br> <i> Frostbite.</i>"
+            , "Why does Waldo only wear striped shirts? : <br> <i> He doesn’t want to be spotted.</i>"
+            , "What do you get when you cross a cactus and a pig? : <br> <i> A porky pine.</i>"
+            , "How do you tell if a vampire is sick? : <br> <i> See if he's coffin.</i>"
+            , "Why do pancakes always win at baseball? : <br> <i> They have the best batter.</i>"
+            , "Why couldn’t the couple get married at the library? : <br> <i> It was all booked up.</i>"
+            , "What does a baby computer call his father? : <br> <i> Data.</i>"
+            , "Why is it so cheap to throw a party at a haunted house? : <br> <i> The ghosts bring all the boos.</i>"
+            , "Where do pirates get their hooks? : <br> <i> Second hand stores.</i>"
+            , "What do you call a beehive without an exit? : <br> <i> Unbelievable.</i>"
+            , "How do you find Will Smith in a snowstorm? : <br> <i> You look for fresh prints.</i>"
+            , "What's a lawyer's favorite drink? : <br> <i> Subpoena colada.</i>"
+            , "What's brown and sticky? : <br> <i> A stick.</i>"
+            , "What do you call a sad cup of coffee? : <br> <i> Depresso.</i>"
+            , "How do you make a water bed bouncier? : <br> <i> Add spring water.</i>"
+            , "Why should you always knock on a refrigerator door before opening it? : <br> <i> In case there's a salad dressing.</i>"
+            , "What happens when frogs park illegally? : <br> <i> They get toad.</i>"
+            , "Why won't swords ever become obsolete? : <br> <i> They're cutting edge technology.</i>"
+            , "Why is it a bad idea to eat a clock? : <br> <i> It's too time-consuming.</i>"
+            , "What kind of shoes do burglars wear? : <br> <i> Sneakers.</i>"
+            , "What job did the frog have at the hotel? : <br> <i> Bellhop.</i>"
+            , "Why did the restaurant hire a pig? : <br> <i> He was good at bacon.</i>"
+
+            , "Why is it a bad idea to iron your four-leaf clover? : <br> <i> You shouldn't press your luck.</i>"
+            , "Why wouldn’t the sesame seed leave the casino? : <br> <i> He was on a roll.</i>"
+            , "What do sprinters eat before a race? : <br> <i> Nothing — they fast.</i>"
+            , "Why did the restaurant on the moon get bad reviews? : <br> <i> It has no atmosphere.</i>"
+            , "How does Moses make his coffee? : <br> <i> Hebrews it.</i>"
+            , "What do you call a shoe made from a banana? : <br> <i> A slipper.</i>"
+            , "Why was the coach yelling at a vending machine? : <br> <i> He wanted his quarterback.</i>"
+            , "Why don’t they play poker in the jungle? : <br> <i> Too many cheetahs.</i>"
+            , "Why did the stadium get so hot after the game? : <br> <i> All the fans left.</i>"
+            , "What do you call a fake noodle? : <br> <i> An impasta.</i>"
+            , "How did the barber win the race? : <br> <i> He knew a shortcut.</i>"
+            , "Why don't lobsters like to share? : <br> <i> They're shellfish.</i>"
+            , "What do scholars eat when they're hungry? : <br> <i> Academia nuts.</i>"
+            , "What do you get from a pampered cow? : <br> <i> Spoiled milk.</i>"
+            , "Where do baby cats learn to swim? : <br> <i> The kitty pool.</i>"
+            , "Why did the bicycle collapse? : <br> <i> It was two tired.</i>"
+            , "Why do seagulls fly over the sea? : <br> <i> If they flew over the bay, they’d be called bagels.</i>"
+            , "How does a boar sign its name? : <br> <i> With a pig pen.</i>"
+            , "How do you organize a space party? : <br> <i> You planet.</i>"
+            , "Why did the poor man stock up on yeast? : <br> <i> To make some dough.</i>"
+
+            , "What did the big flower say to the little flower? : <br> <i> \"Hey there, bud.\"</i>"
+            , "How does a rancher keep track of his cattle? : <br> <i> With a cow-culator.</i>"
+            , "Why can’t you trust an atom? : <br> <i> They make up everything.</i>"
+            , "Why was the robot so tired after his road trip? : <br> <i> He had a hard drive.</i>"
+            , "Why should you never use \"beef stew\" as a password? : <br> <i> It’s not stroganoff.</i>"
+            , "Why is the mushroom always invited to parties? : <br> <i> He's a fungi.</i>"
+            , "What kind of car does an egg drive? : <br> <i> A yolkswagen.</i>"
+            , "Why can’t you give Elsa a balloon? : <br> <i> Because she’d let it go.</i>"
+            , "What do you call an alligator detective? : <br> <i> An investi-gator.</i>"
+            , "Why shouldn’t you write with a broken pencil? : <br> <i> It’s pointless.</i>"
+            , "When do computers overheat? : <br> <i> When they need to vent.</i>"
+            , "What kind of music do planets like? : <br> <i> Neptunes.</i>"
+            , "What did the yoga instructor say when her landlord tried to evict her? : <br> <i> \"Namaste.\"</i>"
+            , "What do you call birds that stick together? : <br> <i> Vel-crows.</i>"
+            , "What do horses say when they fall? : <br> <i> \"I can’t giddy up.\"</i>"
+            , "What did the tomato say to the other tomato during a race? : <br> <i> \"Ketchup.\"</i>"
+            , "What has four wheels and flies? : <br> <i> A garbage truck.</i>"
+            , "Why didn't the skeleton get a prom date? : <br> <i> He didn't have the guts to ask anyone.</i>"
+        ]
+
+        const generateJoke = () => {
+            joke_number = Math.floor(Math.random() * (jokes.length))
+            console.log(joke_number)
+            document.getElementsByClassName("joke")[0].innerHTML = jokes[joke_number]
+        }
+
+    </script>
+</body>
+
+</html>
